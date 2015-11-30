@@ -18,6 +18,6 @@ all:
 clean:
 	rm -f *~
 	rm -f .*~
-	rm -f hello
+	rm -f os_args
 
 distclean: clean
