@@ -5,19 +5,16 @@
 
 .PHONY: all clean
 
-all:
-	for dir in $(MODULES); do (cd $$dir && $(MAKE) $@); done
-	@echo 
-	@echo "+-----------------------------------------------------+"
-	@echo "|                                                     |"
-	@echo "|                   Cheers $(USER)                    |"
-	@echo "|                                                     |"
-	@echo "+-----------------------------------------------------+"
-	@echo 
+all: os_args.go os_args.c
+	go build os_args.go
+	gcc -Wall -o os_args_c os_args.c
 
 clean:
 	rm -f *~
 	rm -f .*~
 	rm -f os_args
+	rm -f os_args_c
 
-distclean: clean
+run: all
+	./os_args that is a long string which builds a nice but senseless test string to check the duration from string addtions by hand and using join for it
+	./os_args_c that is a long string which builds a nice but senseless test string to check the duration from string addtions by hand and using join for it
