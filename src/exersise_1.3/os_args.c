@@ -21,9 +21,11 @@ int main(int argc, char *argv[])
 
 	memset(input, 0, MAX_LEN);
 
+	printf("\n\nThird version -> lang==c\n");
+	
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
 	for (i = 1; i < argc ; i++) {
-		printf("argv[%d]: %s\n", i, argv[i]);
+		//printf("argv[%d]: %s\n", i, argv[i]);
 		strcat(input, argv[i]);
 		strcat(input, " ");
 	}
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
 		(stop.tv_nsec - start.tv_nsec) / 1e3; 
 
 	printf("Result in micro seconds: %d\n", (int) result);
-	// Result -> in micro seconds: 189
+	// Result -> in micro seconds: 15
 	
 	exit(0);
 }
