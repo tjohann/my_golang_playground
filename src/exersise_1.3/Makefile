@@ -1,6 +1,6 @@
 #
 # BSD 3-Clause
-# (c) 2015, thorsten.johannvorderbrueggen@t-online.de                        
+# (c) 2015, thorsten.johannvorderbrueggen@t-online.de
 #
 
 TEST_STRING = that is a long string which builds a nice but senseless test string to check the duration from string addtions by hand and using join for it
