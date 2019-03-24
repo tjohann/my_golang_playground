@@ -2,7 +2,7 @@
  * same behaviour like os_args.go
  *
  * BSD 3-Clause
- * (c) 2015, thorsten.johannvorderbrueggen@t-online.de  
+ * (c) 2015, thorsten.johannvorderbrueggen@t-online.de
  */
 
 #include <stdlib.h>
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	memset(input, 0, MAX_LEN);
 
 	printf("\n\nThird version -> lang==c\n");
-	
+
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
 	for (i = 1; i < argc ; i++) {
 		//printf("argv[%d]: %s\n", i, argv[i]);
@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
         // result in usec
 	result = (stop.tv_sec - start.tv_sec) * 1e6
 		+
-		(stop.tv_nsec - start.tv_nsec) / 1e3; 
+		(stop.tv_nsec - start.tv_nsec) / 1e3;
 
 	printf("Result in micro seconds: %d\n", (int) result);
 	// Result -> in micro seconds: 15
-	
+
 	exit(0);
 }
